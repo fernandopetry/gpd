@@ -1,0 +1,34 @@
+{
+    "name": "fernandopetry/silex-esqueleto",
+    "description": "Teste de projeto Backend Agência 2U",
+    "type": "project",
+    "require": {
+        "php": ">=5.6",
+        "silex/silex": "^2.0",
+        "symfony/var-dumper": "^3.2",
+        "doctrine/dbal": "~2.2",
+        "twig/twig": "^1.31",
+        "monolog/monolog": "^1.22"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/App",
+            "Webme\\": "src/Webme"
+        },
+        "files" : []
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AppTest\\": "tests/AppTest/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.0"
+    },
+    "authors": [
+        {
+            "name": "Fernando Petry",
+            "email": "fernando@ideia.ppg.br"
+        }
+    ]
+}

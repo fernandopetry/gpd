@@ -1,0 +1,37 @@
+.padding-l-0 {
+    padding-left: 0px !important;
+}
+.margin-l-0 {
+    margin-left: 0px;
+}
+.margin-l-10 {
+    margin-left: 10px;
+}
+.margin-l-20 {
+    margin-left: 20px;
+}
+.margin-l-30 {
+    margin-left: 30px;
+}
+.margin-t-10 {
+    margin-top: 10px;
+}
+.margin-b-10 {
+    margin-bottom: 10px;
+}
+.margin-b-30 {
+    margin-bottom: 30px;
+}
+.margin-b-20 {
+    margin-bottom: 20px;
+}
+.margin-r-15 {
+    margin-right: 15px;
+}
+.margin-10 {
+    margin: 10px;
+}
+.form-busca {
+    width: 100% !important;
+}
+

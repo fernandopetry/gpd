@@ -1,0 +1,51 @@
+
+<!-- Modal -->
+<div class="modal fade" id="{{modal.ID}}">
+    <form name="{{modal.ID}}" class="frmExec" action="{{modal.action}}" method="{{modal.method}}" onsubmit="return false;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">{{modal.label}}</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <select class="selectpicker" name="user_id">
+                            <option value="0">Escolha um usuário</option>
+                            {% if modal.userList is defined %}
+                                {% for user in modal.userList %}
+                                    <option value="{{user.id}}" {{ (user.id == modal.user.id ? 'selected' : '') }} >{{user.name}}</option>
+                                {% endfor %}
+                            {% endif %}
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <select class="selectpicker" name="product_id" >
+                            <option value="0">Escolha um produto</option>
+                            {% if modal.productList is defined %}
+                                {% for product in modal.productList %}
+                                    <option value="{{product.id}}" {{ (product.id == modal.product.id ? 'selected' : '') }} >{{product.name}}</option>
+                                {% endfor %}
+                            {% endif %}
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="quantity">Quantidade:</label>
+                        <input type="text" name="quantity" value="{{modal.order.quantity}}" placeholder="Informe a quantidade de produtos" class="form-control" id="qtd">
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary btnSend">Gravar</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </form>
+</div>
+<!-- /.modal -->

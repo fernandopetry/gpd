@@ -1,0 +1,14 @@
+{% if orders is defined %}
+    {% for order in orders %}
+        <tr>
+            <td>{{order.user.name}}</td>
+            <td>{{order.product.name}}</td>
+            <td>{{order.date}}</td>
+            <td>$ {{order.totalPriceUSA}}</td>
+            <td>
+                <a href="/api/order/modal/{{order.id}}" onclick="return false;" title="Editar Item {{order.id}}" class="js_edit" ><i class="margin-l-10 fa fa-edit " ></i></a>
+                <a href="/api/order/{{order.id}}" onclick="return false;" title="Excluir Item {{order.id}}" class="js_delete" ><i class="margin-l-10 fa fa-trash-o" ></i></a>
+            </td>
+        </tr>
+    {% endfor %}
+{% endif %}
